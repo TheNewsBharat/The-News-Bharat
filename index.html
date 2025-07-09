@@ -2,88 +2,61 @@
 <html lang="hi">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The News Bharat</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
-    header { background: #c4001d; color: white; padding: 10px; text-align: center; }
-    nav { background: #fff; padding: 10px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    nav a { text-decoration: none; color: #c4001d; font-weight: bold; padding: 5px 10px; border: 1px solid #c4001d; border-radius: 5px; }
-    section { padding: 20px; }
-    .news-section { background: white; margin-bottom: 20px; padding: 10px; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
-    footer { background: #222; color: white; padding: 10px; text-align: center; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #f9f9f9; }
+    header { background: linear-gradient(to right, red, navy); color: white; padding: 10px; display: flex; align-items: center; justify-content: space-between; }
+    header img { height: 50px; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    .breaking { background: red; color: white; padding: 10px; font-weight: bold; animation: scroll 10s linear infinite; }
+    @keyframes scroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+    .categories { display: flex; flex-wrap: wrap; gap: 10px; padding: 10px; }
+    .categories button { padding: 10px; background: navy; color: white; border: none; border-radius: 5px; }
+    .news { padding: 20px; background: white; margin: 10px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
     .comment-box { margin-top: 10px; }
-    .ads { background: #ffe; border: 1px dashed #aaa; padding: 10px; margin: 20px 0; text-align: center; }
-    .youtube-link { text-align: center; margin: 10px 0; }
+    footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 20px; }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="https://yt3.googleusercontent.com/ytc/AIdro_kEuJ47eMXOMWV7rY4OU9OZRVQ7KDz7S-PpB7dEVm1NYw=s88-c-k-c0x00ffffff-no-rj" alt="Logo" height="40" />
-  <h1>The News Bharat</h1>
+  <img src="logo.png" alt="The News Bharat" />
+  <nav>
+    <a href="#">होम</a>
+    <a href="#">देश</a>
+    <a href="#">विदेश</a>
+    <a href="#">खेल</a>
+    <a href="#">मनोरंजन</a>
+    <a href="#">राशिफल</a>
+    <a href="#">सेहत</a>
+  </nav>
 </header>
 
-<div class="youtube-link">
-  <a href="https://www.youtube.com/@thenewsbharat4" target="_blank">हमारे YouTube चैनल पर जाएं</a>
+<div class="breaking">📢 ब्रेकिंग न्यूज़: आपकी ताज़ा खबरें यहां दिखेंगी।</div>
+
+<div class="categories">
+  <button>बड़ी खबरें</button>
+  <button>देश</button>
+  <button>विदेश</button>
+  <button>खेल</button>
+  <button>राशिफल</button>
+  <button>सेहत</button>
+  <button>मनोरंजन</button>
 </div>
 
-<nav>
-  <a href="#badi-khabar">बड़ी खबरें</a>
-  <a href="#desh-videsh">देश विदेश</a>
-  <a href="#rajya">राज्य की खबर</a>
-  <a href="#khel">खेल</a>
-  <a href="#rashifal">राशिफल</a>
-  <a href="#sehat">सेहत</a>
-  <a href="#entertainment">मनोरंजन</a>
-</nav>
-
-<section id="badi-khabar" class="news-section">
-  <h2>बड़ी खबरें</h2>
-  <p>आज की सबसे बड़ी खबरें यहां पढ़ें...</p>
+<div class="news">
+  <h3>ट्रंप ने फिर फोड़ा टैरीफ बम... इराक पर 30%, तो फिलीपींस पर लगाया 25% टैक्स</h3>
+  <p>यह पोस्ट उदाहरण है। आप GitHub repo में markdown या HTML के ज़रिए अपनी असली खबरें डाल सकते हैं।</p>
   <div class="comment-box">
-    <textarea placeholder="अपना कमेंट लिखें..." rows="2" cols="50"></textarea><br/>
-    <button>कमेंट करें</button> ❤️ 10
+    <input type="text" placeholder="अपना कमेंट लिखें..." style="width:100%; padding:10px;" />
+    <button style="margin-top:5px; background:red; color:white; border:none; padding:10px;">सबमिट</button>
   </div>
-</section>
-
-<section id="desh-videsh" class="news-section">
-  <h2>देश विदेश</h2>
-  <p>देश और विदेश की ताज़ा ख़बरें...</p>
-</section>
-
-<section id="rajya" class="news-section">
-  <h2>खबर अपने राज्य की</h2>
-  <p>आपके राज्य की महत्वपूर्ण खबरें...</p>
-</section>
-
-<section id="khel" class="news-section">
-  <h2>खेल</h2>
-  <p>क्रिकेट, फुटबॉल और अन्य खेलों की अपडेट...</p>
-</section>
-
-<section id="rashifal" class="news-section">
-  <h2>राशिफल</h2>
-  <p>आज का राशिफल जानें...</p>
-</section>
-
-<section id="sehat" class="news-section">
-  <h2>सेहत</h2>
-  <p>स्वास्थ्य संबंधी जरूरी जानकारी...</p>
-</section>
-
-<section id="entertainment" class="news-section">
-  <h2>मनोरंजन</h2>
-  <p>बॉलीवुड, वेब सीरीज, और टीवी न्यूज़...</p>
-</section>
-
-<div class="ads">
-  <p>यहाँ भविष्य में विज्ञापन दिखाया जा सकता है (AdSense Ready)</p>
 </div>
 
 <footer>
-  © 2025 The News Bharat | All rights reserved.
+  <p>© 2025 The News Bharat | <a href="https://www.youtube.com/@thenewsbharat4" target="_blank" style="color:yellow;">हमारा यूट्यूब चैनल</a></p>
 </footer>
 
 </body>
-</html>
+  </html>
