@@ -5,72 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The News Bharat</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      color: #222;
-      text-align: center;
-    }
-    header {
-      background-color: #d40000;
-      color: white;
-      padding: 20px 10px;
-    }
-    h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    p {
-      margin-top: 5px;
-    }
-    .video {
-      margin: 30px 0;
-    }
-    iframe {
-      width: 90%;
-      max-width: 600px;
-      height: 315px;
-      border: none;
-    }
-    .yt-link {
-      margin-top: 20px;
-    }
-    .yt-link a {
-      color: #d40000;
-      font-weight: bold;
-      font-size: 18px;
-      text-decoration: none;
-    }
-    .yt-link a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      background-color: #222;
-      color: white;
-      padding: 10px;
-      margin-top: 40px;
-    }
+    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
+    header { background: #c4001d; color: white; padding: 10px; text-align: center; }
+    nav { background: #fff; padding: 10px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    nav a { text-decoration: none; color: #c4001d; font-weight: bold; padding: 5px 10px; border: 1px solid #c4001d; border-radius: 5px; }
+    section { padding: 20px; }
+    .news-section { background: white; margin-bottom: 20px; padding: 10px; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    footer { background: #222; color: white; padding: 10px; text-align: center; }
+    .comment-box { margin-top: 10px; }
+    .ads { background: #ffe; border: 1px dashed #aaa; padding: 10px; margin: 20px 0; text-align: center; }
+    .youtube-link { text-align: center; margin: 10px 0; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>📰 The News Bharat</h1>
-    <p>यह हमारी पहली वेबसाइट है, जो आप तक सही और सटीक जानकारी पहुँचाने के लिए बनाई गई है।</p>
-  </header>
 
-  <div class="video">
-    <h2>हमारा ताज़ा वीडियो देखें</h2>
-    <iframe src="https://www.youtube.com/embed/QjzOUa4Y4zE" allowfullscreen></iframe>
+<header>
+  <img src="https://yt3.googleusercontent.com/ytc/AIdro_kEuJ47eMXOMWV7rY4OU9OZRVQ7KDz7S-PpB7dEVm1NYw=s88-c-k-c0x00ffffff-no-rj" alt="Logo" height="40" />
+  <h1>The News Bharat</h1>
+</header>
+
+<div class="youtube-link">
+  <a href="https://www.youtube.com/@thenewsbharat4" target="_blank">हमारे YouTube चैनल पर जाएं</a>
+</div>
+
+<nav>
+  <a href="#badi-khabar">बड़ी खबरें</a>
+  <a href="#desh-videsh">देश विदेश</a>
+  <a href="#rajya">राज्य की खबर</a>
+  <a href="#khel">खेल</a>
+  <a href="#rashifal">राशिफल</a>
+  <a href="#sehat">सेहत</a>
+  <a href="#entertainment">मनोरंजन</a>
+</nav>
+
+<section id="badi-khabar" class="news-section">
+  <h2>बड़ी खबरें</h2>
+  <p>आज की सबसे बड़ी खबरें यहां पढ़ें...</p>
+  <div class="comment-box">
+    <textarea placeholder="अपना कमेंट लिखें..." rows="2" cols="50"></textarea><br/>
+    <button>कमेंट करें</button> ❤️ 10
   </div>
+</section>
 
-  <div class="yt-link">
-    🔗 <a href="https://www.youtube.com/@thenewsbharat4" target="_blank">हमारा YouTube चैनल देखें</a>
-  </div>
+<section id="desh-videsh" class="news-section">
+  <h2>देश विदेश</h2>
+  <p>देश और विदेश की ताज़ा ख़बरें...</p>
+</section>
 
-  <footer>
-    <p>© 2025 The News Bharat | सभी अधिकार सुरक्षित</p>
-  </footer>
+<section id="rajya" class="news-section">
+  <h2>खबर अपने राज्य की</h2>
+  <p>आपके राज्य की महत्वपूर्ण खबरें...</p>
+</section>
+
+<section id="khel" class="news-section">
+  <h2>खेल</h2>
+  <p>क्रिकेट, फुटबॉल और अन्य खेलों की अपडेट...</p>
+</section>
+
+<section id="rashifal" class="news-section">
+  <h2>राशिफल</h2>
+  <p>आज का राशिफल जानें...</p>
+</section>
+
+<section id="sehat" class="news-section">
+  <h2>सेहत</h2>
+  <p>स्वास्थ्य संबंधी जरूरी जानकारी...</p>
+</section>
+
+<section id="entertainment" class="news-section">
+  <h2>मनोरंजन</h2>
+  <p>बॉलीवुड, वेब सीरीज, और टीवी न्यूज़...</p>
+</section>
+
+<div class="ads">
+  <p>यहाँ भविष्य में विज्ञापन दिखाया जा सकता है (AdSense Ready)</p>
+</div>
+
+<footer>
+  © 2025 The News Bharat | All rights reserved.
+</footer>
+
 </body>
 </html>
