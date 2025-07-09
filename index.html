@@ -9,10 +9,11 @@
     header { background: linear-gradient(to right, red, navy); color: white; padding: 10px; display: flex; align-items: center; justify-content: space-between; }
     header img { height: 50px; }
     nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
-    .breaking { background: red; color: white; padding: 10px; font-weight: bold; animation: scroll 10s linear infinite; }
-    @keyframes scroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+    nav a:hover { text-decoration: underline; }
+    .breaking { background: red; color: white; padding: 10px; font-weight: bold; overflow: hidden; white-space: nowrap; }
     .categories { display: flex; flex-wrap: wrap; gap: 10px; padding: 10px; }
-    .categories button { padding: 10px; background: navy; color: white; border: none; border-radius: 5px; }
+    .categories a { padding: 10px; background: navy; color: white; border-radius: 5px; text-decoration: none; }
+    .categories a:hover { background: darkred; }
     .news { padding: 20px; background: white; margin: 10px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
     .comment-box { margin-top: 10px; }
     footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 20px; }
@@ -23,31 +24,32 @@
 <header>
   <img src="logo.png" alt="The News Bharat" />
   <nav>
-    <a href="#">होम</a>
-    <a href="#">देश</a>
-    <a href="#">विदेश</a>
-    <a href="#">खेल</a>
-    <a href="#">मनोरंजन</a>
-    <a href="#">राशिफल</a>
-    <a href="#">सेहत</a>
+    <a href="index.html">होम</a>
+    <a href="desh.html">देश</a>
+    <a href="videsh.html">विदेश</a>
+    <a href="khel.html">खेल</a>
+    <a href="manoranjan.html">मनोरंजन</a>
+    <a href="rashifal.html">राशिफल</a>
+    <a href="sehat.html">सेहत</a>
   </nav>
 </header>
 
 <div class="breaking">📢 ब्रेकिंग न्यूज़: आपकी ताज़ा खबरें यहां दिखेंगी।</div>
 
 <div class="categories">
-  <button>बड़ी खबरें</button>
-  <button>देश</button>
-  <button>विदेश</button>
-  <button>खेल</button>
-  <button>राशिफल</button>
-  <button>सेहत</button>
-  <button>मनोरंजन</button>
+  <a href="badi-khabrein.html">बड़ी खबरें</a>
+  <a href="desh.html">देश</a>
+  <a href="videsh.html">विदेश</a>
+  <a href="khel.html">खेल</a>
+  <a href="rashifal.html">राशिफल</a>
+  <a href="sehat.html">सेहत</a>
+  <a href="manoranjan.html">मनोरंजन</a>
 </div>
 
+<!-- यहाँ से मुख्य पोस्ट शुरू होती है -->
 <div class="news">
-  <h3>ट्रंप ने फिर फोड़ा टैरीफ बम... इराक पर 30%, तो फिलीपींस पर लगाया 25% टैक्स</h3>
-  <p>यह पोस्ट उदाहरण है। आप GitHub repo में markdown या HTML के ज़रिए अपनी असली खबरें डाल सकते हैं।</p>
+  <h3>यहां पर आपकी मुख्य पोस्टें दिखाई देंगी</h3>
+  <p>यह पोस्ट सिर्फ उदाहरण के लिए है। आप अपनी असली न्यूज़ पोस्ट HTML फाइल्स में खुद डाल सकते हैं या किसी CMS का इस्तेमाल कर सकते हैं।</p>
   <div class="comment-box">
     <input type="text" placeholder="अपना कमेंट लिखें..." style="width:100%; padding:10px;" />
     <button style="margin-top:5px; background:red; color:white; border:none; padding:10px;">सबमिट</button>
@@ -55,8 +57,9 @@
 </div>
 
 <footer>
-  <p>© 2025 The News Bharat | <a href="https://www.youtube.com/@thenewsbharat4" target="_blank" style="color:yellow;">हमारा यूट्यूब चैनल</a></p>
+  <p>© 2025 The News Bharat Katn | <a href="https://www.youtube.com/@thenewsbharat4" target="_blank" style="color:yellow;">हमारा यूट्यूब चैनल</a></p>
 </footer>
 
 </body>
 </html>
+
