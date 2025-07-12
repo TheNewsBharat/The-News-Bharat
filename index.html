@@ -1,163 +1,165 @@
-
 <!DOCTYPE html><html lang="hi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The News Bharat</title>
+  <title>The News Bharat Katni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Mukta', sans-serif;
+    }
+    body {
+      background-color: #f8f8f8;
     }
     header {
-      background: linear-gradient(to right, #b30000, #8b0000);
-      color: white;
+      background: linear-gradient(90deg, #b80000, #800000);
       padding: 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
-    header img {
-      height: 50px;
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      width: 50px;
+      margin-right: 10px;
+    }
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
-      margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
+      background-color: #d80000;
+      padding: 5px 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
     .breaking {
-      background: red;
+      background-color: #ff0000;
       color: white;
-      padding: 10px;
+      padding: 8px;
+      text-align: center;
       font-weight: bold;
-      overflow: hidden;
-      white-space: nowrap;
     }
     .categories {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
-      padding: 10px;
+      margin: 15px 0;
     }
-    .categories a {
-      padding: 10px;
-      background: #b30000;
+    .categories button {
+      background: #c40000;
       color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-    }
-    .categories a:hover {
-      background: #e60000;
-    }
-    .news {
-      padding: 20px;
-      background: white;
-      margin: 10px;
+      padding: 8px 15px;
+      border: none;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      font-size: 16px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
     }
-    .comment-box {
-      margin-top: 10px;
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
-    .comment-box input {
-      width: 100%;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+    main h2 {
       margin-bottom: 10px;
+      font-size: 24px;
     }
-    .comment-box button {
-      background: #b30000;
+    textarea {
+      width: 100%;
+      height: 60px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .submit-btn {
+      margin-top: 10px;
+      background: #d80000;
       color: white;
       border: none;
       padding: 10px 20px;
+      font-size: 16px;
       border-radius: 5px;
       cursor: pointer;
     }
-    .comment-box button:hover {
-      background: #e60000;
-    }
     footer {
-      background: #111;
+      background-color: black;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 15px;
       margin-top: 20px;
       font-size: 14px;
     }
     footer a {
-      color: #ffcc00;
+      color: orange;
       text-decoration: none;
+      margin-left: 5px;
     }
     .bottom-nav {
       position: fixed;
       bottom: 0;
       left: 0;
-      right: 0;
-      background: #b30000;
+      width: 100%;
+      background-color: #b80000;
       display: flex;
       justify-content: space-around;
       padding: 8px 0;
-      box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
     }
     .bottom-nav a {
       color: white;
       text-decoration: none;
       text-align: center;
-      font-weight: bold;
       font-size: 14px;
-    }
-    .bottom-nav a:hover {
-      text-shadow: 0 0 5px yellow;
     }
   </style>
 </head>
-<body><header>
-  <img src="https://i.ibb.co/PsStDMYt/Polish-20250712-215131385.png" alt="The News Bharat" />
-  <nav>
-    <a href="index.html">होम</a>
-    <a href="desh.html">देश</a>
-    <a href="videsh.html">विदेश</a>
-    <a href="khel.html">खेल</a>
-    <a href="manoranjan.html">मनोरंजन</a>
-    <a href="rashifal.html">राशिफल</a>
-    <a href="sehat.html">सेहत</a>
-  </nav>
-</header><div class="breaking">📢 ब्रेकिंग न्यूज़: आपकी ताज़ा खबरें यहां दिखेंगी।</div><div class="categories">
-  <a href="badi-khabrein.html">बड़ी खबरें</a>
-  <a href="desh.html">देश</a>
-  <a href="videsh.html">विदेश</a>
-  <a href="khel.html">खेल</a>
-  <a href="rashifal.html">राशिफल</a>
-  <a href="sehat.html">सेहत</a>
-  <a href="manoranjan.html">मनोरंजन</a>
-</div><div class="news">
-  <h3>मुख्य न्यूज़ पोस्ट</h3>
-  <p>यहां पर आपकी ताज़ा खबरें, वीडियो और न्यूज़ आर्टिकल्स दिखाए जाएंगे।</p>
-  <div class="comment-box">
-    <input type="text" id="commentInput" placeholder="अपना कमेंट लिखें..." />
-    <button onclick="submitComment()">सबमिट</button>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://i.ibb.co/PsStDMYt/Polish-20250712-215131385.png" alt="Logo">
+    </div>
+    <nav>
+      <a href="#">🏠 Home</a>
+      <a href="#">🇮🇳 Nation</a>
+      <a href="#">🌐 World</a>
+      <a href="#">🏏 Sports</a>
+      <a href="#">🎬 Entertainment</a>
+      <a href="#">♈ Horoscope</a>
+      <a href="#">🧘‍♂️ Health</a>
+    </nav>
+  </header>  <div class="breaking">📢 ब्रेकिंग न्यूज़: आपकी ताज़ा खबरें यहाँ दिखेंगी।</div>  <div class="categories">
+    <button>बड़ी खबरें</button>
+    <button>देश</button>
+    <button>विदेश</button>
+    <button>खेल</button>
+    <button>राशिफल</button>
+    <button>सेहत</button>
+    <button>मनोरंजन</button>
+  </div>  <main>
+    <h2>मुख्य न्यूज़ पोस्ट</h2>
+    <p>यहां पर आपकी ताज़ा खबरें, वीडियो और न्यूज़ आर्टिकल्स दिखाए जाएंगे।</p>
+    <textarea placeholder="अपना कमेंट लिखें..."></textarea>
+    <button class="submit-btn">सबमिट</button>
+  </main>  <footer>
+    © 2025 <strong>The News Bharat Katni</strong> | <a href="#">हमारा यूट्यूब चैनल देखें</a>
+  </footer>  <div class="bottom-nav">
+    <a href="#">🏠 होम</a>
+    <a href="#">📋 मेनू</a>
   </div>
-</div><footer>
-  <p>© 2025 <strong>The News Bharat Katni</strong> | <a href="https://www.youtube.com/@thenewsbharat4" target="_blank">हमारा यूट्यूब चैनल देखें</a></p>
-</footer><div class="bottom-nav">
-  <a href="index.html">🏠 होम</a>
-  <a href="#">📋 मेन्यू</a>
-</div><script>
-  function submitComment() {
-    const comment = document.getElementById('commentInput').value;
-    if (comment.trim()) {
-      alert("आपका कमेंट सबमिट कर दिया गया है: " + comment);
-      document.getElementById('commentInput').value = "";
-    } else {
-      alert("कृपया पहले अपना कमेंट लिखें।");
-    }
-  }
-</script></body>
+</body>
 </html>
