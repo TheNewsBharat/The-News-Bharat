@@ -5,24 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The News Bharat</title>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #f9f9f9; }
-    header { background: linear-gradient(to right, red, navy); color: white; padding: 10px; display: flex; align-items: center; justify-content: space-between; }
-    header img { height: 50px; }
-    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    .breaking { background: red; color: white; padding: 10px; font-weight: bold; overflow: hidden; white-space: nowrap; }
-    .categories { display: flex; flex-wrap: wrap; gap: 10px; padding: 10px; }
-    .categories a { padding: 10px; background: navy; color: white; border-radius: 5px; text-decoration: none; }
-    .categories a:hover { background: darkred; }
-    .news { padding: 20px; background: white; margin: 10px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
-    .comment-box { margin-top: 10px; }
-    footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 20px; }
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #f4f4f4; }
+    header {
+      background: linear-gradient(to right, red, navy);
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 60px;
+    }
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .breaking {
+      background: red;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+    }
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 10px 20px;
+    }
+    .categories a {
+      padding: 10px 16px;
+      background: navy;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .categories a:hover {
+      background: darkred;
+    }
+    .news {
+      padding: 20px;
+      background: white;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .comment-box {
+      margin-top: 20px;
+    }
+    .comment-box input {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .comment-box button {
+      margin-top: 10px;
+      background: red;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .comment-box button:hover {
+      background: darkred;
+    }
+    footer {
+      background: #111;
+      color: #bbb;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+    footer a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
+  <script>
+    function submitComment() {
+      const comment = document.getElementById('commentInput').value;
+      if (comment.trim() === '') {
+        alert("कृपया कोई कमेंट लिखें।");
+      } else {
+        alert("धन्यवाद! आपका कमेंट सबमिट हो गया है।");
+        document.getElementById('commentInput').value = '';
+      }
+    }
+  </script>
 </head>
 <body>
 
 <header>
-  <img src="logo.png" alt="The News Bharat" />
+  <img src="https://i.ibb.co/PsStDMYt/Polish-20250712-215131385.png" alt="The News Bharat" />
   <nav>
     <a href="index.html">होम</a>
     <a href="desh.html">देश</a>
@@ -46,20 +136,19 @@
   <a href="manoranjan.html">मनोरंजन</a>
 </div>
 
-<!-- यहाँ से मुख्य पोस्ट शुरू होती है -->
 <div class="news">
-  <h3>यहां पर आपकी मुख्य पोस्टें दिखाई देंगी</h3>
-  <p>यह पोस्ट सिर्फ उदाहरण के लिए है। आप अपनी असली न्यूज़ पोस्ट HTML फाइल्स में खुद डाल सकते हैं या किसी CMS का इस्तेमाल कर सकते हैं।</p>
+  <h3>मुख्य न्यूज़ पोस्ट</h3>
+  <p>यहां पर आपकी ताज़ा खबरें, वीडियो और न्यूज़ आर्टिकल्स दिखाए जाएंगे।</p>
+
   <div class="comment-box">
-    <input type="text" placeholder="अपना कमेंट लिखें..." style="width:100%; padding:10px;" />
-    <button style="margin-top:5px; background:red; color:white; border:none; padding:10px;">सबमिट</button>
+    <input type="text" id="commentInput" placeholder="अपना कमेंट लिखें..." />
+    <button onclick="submitComment()">सबमिट</button>
   </div>
 </div>
 
 <footer>
-  <p>© 2025 The News Bharat Katn | <a href="https://www.youtube.com/@thenewsbharat4" target="_blank" style="color:yellow;">हमारा यूट्यूब चैनल</a></p>
+  <p>© 2025 <strong>The News Bharat Katni</strong> | <a href="https://www.youtube.com/@thenewsbharat4" target="_blank">हमारा यूट्यूब चैनल देखें</a></p>
 </footer>
 
 </body>
 </html>
-
