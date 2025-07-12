@@ -1,28 +1,31 @@
-<!DOCTYPE html>
-<html lang="hi">
+
+<!DOCTYPE html><html lang="hi">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The News Bharat</title>
   <style>
-    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #f4f4f4; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+    }
     header {
-      background: linear-gradient(to right, red, navy);
+      background: linear-gradient(to right, #b30000, #8b0000);
       color: white;
-      padding: 10px 20px;
+      padding: 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
     header img {
-      height: 60px;
+      height: 50px;
     }
     nav a {
       color: white;
-      margin: 0 12px;
+      margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 16px;
     }
     nav a:hover {
       text-decoration: underline;
@@ -32,86 +35,90 @@
       color: white;
       padding: 10px;
       font-weight: bold;
-      font-size: 16px;
-      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
     }
     .categories {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      padding: 10px 20px;
+      padding: 10px;
     }
     .categories a {
-      padding: 10px 16px;
-      background: navy;
+      padding: 10px;
+      background: #b30000;
       color: white;
-      border-radius: 5px;
+      border-radius: 8px;
       text-decoration: none;
-      font-size: 14px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     }
     .categories a:hover {
-      background: darkred;
+      background: #e60000;
     }
     .news {
       padding: 20px;
       background: white;
-      margin: 20px;
+      margin: 10px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     .comment-box {
-      margin-top: 20px;
+      margin-top: 10px;
     }
     .comment-box input {
       width: 100%;
       padding: 10px;
-      font-size: 14px;
-      border: 1px solid #ccc;
       border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
     }
     .comment-box button {
-      margin-top: 10px;
-      background: red;
+      background: #b30000;
       color: white;
       border: none;
       padding: 10px 20px;
-      font-size: 14px;
       border-radius: 5px;
       cursor: pointer;
     }
     .comment-box button:hover {
-      background: darkred;
+      background: #e60000;
     }
     footer {
       background: #111;
-      color: #bbb;
+      color: white;
       text-align: center;
       padding: 20px;
+      margin-top: 20px;
       font-size: 14px;
     }
     footer a {
-      color: #ffc107;
+      color: #ffcc00;
       text-decoration: none;
     }
-    footer a:hover {
-      text-decoration: underline;
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #b30000;
+      display: flex;
+      justify-content: space-around;
+      padding: 8px 0;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+    }
+    .bottom-nav a {
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .bottom-nav a:hover {
+      text-shadow: 0 0 5px yellow;
     }
   </style>
-  <script>
-    function submitComment() {
-      const comment = document.getElementById('commentInput').value;
-      if (comment.trim() === '') {
-        alert("कृपया कोई कमेंट लिखें।");
-      } else {
-        alert("धन्यवाद! आपका कमेंट सबमिट हो गया है।");
-        document.getElementById('commentInput').value = '';
-      }
-    }
-  </script>
 </head>
-<body>
-
-<header>
+<body><header>
   <img src="https://i.ibb.co/PsStDMYt/Polish-20250712-215131385.png" alt="The News Bharat" />
   <nav>
     <a href="index.html">होम</a>
@@ -122,11 +129,7 @@
     <a href="rashifal.html">राशिफल</a>
     <a href="sehat.html">सेहत</a>
   </nav>
-</header>
-
-<div class="breaking">📢 ब्रेकिंग न्यूज़: आपकी ताज़ा खबरें यहां दिखेंगी।</div>
-
-<div class="categories">
+</header><div class="breaking">📢 ब्रेकिंग न्यूज़: आपकी ताज़ा खबरें यहां दिखेंगी।</div><div class="categories">
   <a href="badi-khabrein.html">बड़ी खबरें</a>
   <a href="desh.html">देश</a>
   <a href="videsh.html">विदेश</a>
@@ -134,21 +137,27 @@
   <a href="rashifal.html">राशिफल</a>
   <a href="sehat.html">सेहत</a>
   <a href="manoranjan.html">मनोरंजन</a>
-</div>
-
-<div class="news">
+</div><div class="news">
   <h3>मुख्य न्यूज़ पोस्ट</h3>
   <p>यहां पर आपकी ताज़ा खबरें, वीडियो और न्यूज़ आर्टिकल्स दिखाए जाएंगे।</p>
-
   <div class="comment-box">
     <input type="text" id="commentInput" placeholder="अपना कमेंट लिखें..." />
     <button onclick="submitComment()">सबमिट</button>
   </div>
-</div>
-
-<footer>
+</div><footer>
   <p>© 2025 <strong>The News Bharat Katni</strong> | <a href="https://www.youtube.com/@thenewsbharat4" target="_blank">हमारा यूट्यूब चैनल देखें</a></p>
-</footer>
-
-</body>
+</footer><div class="bottom-nav">
+  <a href="index.html">🏠 होम</a>
+  <a href="#">📋 मेन्यू</a>
+</div><script>
+  function submitComment() {
+    const comment = document.getElementById('commentInput').value;
+    if (comment.trim()) {
+      alert("आपका कमेंट सबमिट कर दिया गया है: " + comment);
+      document.getElementById('commentInput').value = "";
+    } else {
+      alert("कृपया पहले अपना कमेंट लिखें।");
+    }
+  }
+</script></body>
 </html>
